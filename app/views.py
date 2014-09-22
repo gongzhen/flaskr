@@ -1,8 +1,7 @@
-# all the imports
-from sqlite3 import dbapi2 as sqlite3
 from flask import Flask, request, session, g, redirect, url_for, abort, render_template, flash
+from flask.ext.login import login_user, logout_user, current_user, login_required
 from contextlib import closing
-from app import app
+from app import app, db, login_manager
 import os
 
 # display the entries

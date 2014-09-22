@@ -24,6 +24,6 @@ app.config.from_envvar('FLASKR_SETTING', silent=True)
 db = SQLAlchemy()
 login_manager = LoginManager()
 db.init_app(app)
-login_manager.init_app()
+login_manager.init_app(app)
 
 from app import views
